@@ -10,3 +10,4 @@ Priority
 * coffeescript
 * javascript
 * C++
+* erlang
