@@ -1,0 +1,3 @@
+[submodule "python/socket"]
+	path = python/socket
+	url = https://github.com/lud4ik/advanced-01.git
