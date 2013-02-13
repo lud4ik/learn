@@ -11,4 +11,5 @@ Priority
 * javascript (8, 6)
 * C++ (5, 1)
 * Erlang (0, 0)
+
 (theory, practice) - level measured relative to maximum own potential
