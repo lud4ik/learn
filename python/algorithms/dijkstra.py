@@ -19,8 +19,7 @@ def get_input(file_path, directional=True):
 def get_vertex(graph):
     for k, values in graph.items():
         yield k
-        for v in values.keys():
-            yield v
+        yield from values.keys()
 
 
 def get_root(stop, path):
