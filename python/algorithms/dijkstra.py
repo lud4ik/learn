@@ -70,5 +70,5 @@ def get_path(file_path, start, stop, directional=True):
         print("No root from {} to {}.".format(start, stop))
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
     get_path("input.txt", "A", "F", directional=False)
