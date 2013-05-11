@@ -39,18 +39,20 @@ cdef short[:] get_root(int start, int stop, short[:] previous):
 
 cdef dijkstra(W, int start, int stop, int n):
     cdef int V = start, v, j, i
-    cdef float x, y
     P = array('f', [float('inf') for v in range(n)])
     T = array('f', [float('inf') for v in range(n)])
     Pr = array('h', [0 for v in range(n)])
+    S = array('f', [0 for v in range(n)])
     P[start] = 0
 
     while V != stop:
-        S = array('f', [P[V] + W[V][j] for j in range(n)])
+        for j in range(n):
+            S[j] = P[V] + W[V][j]
         for j in range(n):
             if S[j] < T[j]:
                 Pr[j] = V
-        T = array('f', [min(x, y) for x, y in zip(T, S)])
+        for j in range(n):
+            T[j] = min(T[j], S[j])
         i = T.index(min(T))
         P[i] = T[i]
         T[i] = float('inf')
