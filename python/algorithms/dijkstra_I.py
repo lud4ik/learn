@@ -2,6 +2,7 @@
     Dijkstra's algorithm for weighted graphs (I).
     Work for directional and nondirectional graphs.
 """
+import time
 from collections import defaultdict
 
 
@@ -71,4 +72,7 @@ def get_path(file_path, start, stop, directional=True):
 
 
 if __name__ == "__main__":
+    start = time.time()
     get_path("input.txt", "A", "F", directional=False)
+    stop = time.time()
+    print("{:.10f}".format(stop - start))

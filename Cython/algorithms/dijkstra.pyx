@@ -1,7 +1,8 @@
 """
     Dijkstra's algorithm for weighted graphs (II). Matrix representation.
+    cython -3 dijkstra.pyx
+    gcc -shared -pthread -fPIC -fwrapv -O2 -Wall -fno-strict-aliasing -I/usr/include/python3.3 -o dijkstra.so dijkstra.c
 """
-import time
 
 
 def get_input(file_path):
@@ -24,16 +25,17 @@ def get_input(file_path):
 
 
 def get_root(start, stop, previous):
-    v = stop
+    root, v = [], stop
     while True:
-        yield v
+        root.append(v)
         if v == start:
             break
         v = previous[v]
+    return root
 
 
-def dijkstra(W, start, stop, n):
-    V = start
+cpdef dijkstra(W, int start, int stop, int n):
+    cdef int V = start, v, j, i
     P = [float('inf') for v in range(n)]
     T = [float('inf') for v in range(n)]
     Pr = [0 for v in range(n)]
@@ -65,9 +67,3 @@ def get_path(file_path, start, stop):
     result += "{:.2f}".format(distance)
     print(result)
 
-
-if __name__ == "__main__":
-    start = time.time()
-    get_path("input.txt", "A", "F")
-    stop = time.time()
-    print("{:.10f}".format(stop - start))
