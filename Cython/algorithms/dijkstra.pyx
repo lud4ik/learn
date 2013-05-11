@@ -3,9 +3,11 @@
     cython -3 dijkstra.pyx
     gcc -shared -pthread -fPIC -fwrapv -O2 -Wall -fno-strict-aliasing -I/usr/include/python3.3 -o dijkstra.so dijkstra.c
 """
+from array import array
 
 
-def get_input(file_path):
+cpdef get_input(file_path):
+    cdef int num_vertex, index
     temp, vertex, index = [], {}, 0
     with open(file_path, "r") as f:
         for line in f:
@@ -24,8 +26,9 @@ def get_input(file_path):
     return graph, vertex
 
 
-def get_root(start, stop, previous):
-    root, v = [], stop
+cdef short[:] get_root(int start, int stop, short[:] previous):
+    cdef int v = stop
+    root = array('h')
     while True:
         root.append(v)
         if v == start:
@@ -34,19 +37,20 @@ def get_root(start, stop, previous):
     return root
 
 
-cpdef dijkstra(W, int start, int stop, int n):
+cdef dijkstra(W, int start, int stop, int n):
     cdef int V = start, v, j, i
-    P = [float('inf') for v in range(n)]
-    T = [float('inf') for v in range(n)]
-    Pr = [0 for v in range(n)]
+    cdef float x, y
+    P = array('f', [float('inf') for v in range(n)])
+    T = array('f', [float('inf') for v in range(n)])
+    Pr = array('h', [0 for v in range(n)])
     P[start] = 0
 
     while V != stop:
-        S = [P[V] + W[V][j] for j in range(n)]
+        S = array('f', [P[V] + W[V][j] for j in range(n)])
         for j in range(n):
             if S[j] < T[j]:
                 Pr[j] = V
-        T = [min(x, y) for x, y in zip(T, S)]
+        T = array('f', [min(x, y) for x, y in zip(T, S)])
         i = T.index(min(T))
         P[i] = T[i]
         T[i] = float('inf')
@@ -54,16 +58,16 @@ cpdef dijkstra(W, int start, int stop, int n):
             W[j][i] = float('inf')
         V = i
 
-    return P[V], reversed(list(get_root(start, stop, Pr)))
+    return P[V], get_root(start, stop, Pr)
 
 
-def get_path(file_path, start, stop):
+cpdef get_path(file_path, start, stop):
     graph, vertex = get_input(file_path)
     distance, root = dijkstra(graph, vertex[start], vertex[stop], len(vertex))
     vertex = {v: k for k, v in vertex.items()}
     result = ""
     for v in root:
-        result += "{} -> ".format(vertex[v])
-    result += "{:.2f}".format(distance)
+        result = "{} -> ".format(vertex[v]) + result
+    result += " {:.2f}".format(distance)
     print(result)
 
