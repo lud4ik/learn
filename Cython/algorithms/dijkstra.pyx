@@ -5,25 +5,7 @@
 """
 from array import array
 
-
-cpdef get_input(file_path):
-    cdef int num_vertex, index
-    temp, vertex, index = [], {}, 0
-    with open(file_path, "r") as f:
-        for line in f:
-            start, stop, distance = line.split()
-            for v in [start, stop]:
-                if v not in vertex:
-                    vertex[v] = index
-                    index += 1
-            temp.append((vertex[start], vertex[stop], distance))
-    num_vertex = len(vertex)
-    graph = [[float('inf') if c != r else 0 for c in range(num_vertex)] \
-             for r in range(num_vertex)]
-    for start, stop, distance in temp:
-        graph[start][stop] = float(distance)
-        graph[stop][start] = float(distance)
-    return graph, vertex
+from cython.view cimport array as carray
 
 
 cdef short[:] get_root(int start, int stop, short[:] previous):
@@ -37,7 +19,7 @@ cdef short[:] get_root(int start, int stop, short[:] previous):
     return root
 
 
-cdef dijkstra(W, int start, int stop, int n):
+cdef dijkstra(float [:, :] W, int start, int stop, int n):
     cdef int V = start, v, j, i
     P = array('f', [float('inf') for v in range(n)])
     T = array('f', [float('inf') for v in range(n)])
@@ -63,13 +45,45 @@ cdef dijkstra(W, int start, int stop, int n):
     return P[V], get_root(start, stop, Pr)
 
 
-cpdef get_path(file_path, start, stop):
-    graph, vertex = get_input(file_path)
-    distance, root = dijkstra(graph, vertex[start], vertex[stop], len(vertex))
-    vertex = {v: k for k, v in vertex.items()}
-    result = ""
-    for v in root:
-        result = "{} -> ".format(vertex[v]) + result
-    result += " {:.2f}".format(distance)
-    print(result)
+cdef class Extract:
 
+    vertex = {}
+
+    cpdef float [:, :] get_input(self, file_path):
+        cdef int n, i, j, start, stop, index = 0
+        cdef float distance
+        temp, vertex = [], self.vertex
+        with open(file_path, "r") as f:
+            for line in f:
+                _start, _stop, _distance = line.split()
+                for v in [_start, _stop]:
+                    if v not in vertex:
+                        vertex[v] = index
+                        index += 1
+                temp.append((vertex[_start], vertex[_stop], float(_distance)))
+
+        n = len(vertex)
+        graph = carray(shape=(n, n), itemsize=sizeof(float), format="f")
+        cdef float [:, :] _graph = graph
+        for i in range(n):
+            for j in range(n):
+                if i != j:
+                    _graph[i][j] = float('inf')
+                else:
+                    _graph[i][j] = 0
+
+        for start, stop, distance in temp:
+            _graph[start][stop] = distance
+            _graph[stop][start] = distance
+        return graph
+
+    cpdef get_path(self, file_path, start, stop):
+        cdef float [:, :] graph
+        graph, vertex = self.get_input(file_path), self.vertex
+        distance, root = dijkstra(graph, vertex[start], vertex[stop], len(vertex))
+        vertex = {v: k for k, v in vertex.items()}
+        result = ""
+        for v in root:
+            result = "{} -> ".format(vertex[v]) + result
+        result += " {:.2f}".format(distance)
+        print(result)
