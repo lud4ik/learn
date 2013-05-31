@@ -15,7 +15,7 @@ Priority
 
 
 
-* http://www.tutorialspoint.com/ios/index.htm
+http://www.tutorialspoint.com/ios/index.htm
 
 
 
