@@ -2,7 +2,7 @@
 
 # C extensions
 *.so
-*.c
+Cython/*/*.c
 
 # Packages
 *.egg
