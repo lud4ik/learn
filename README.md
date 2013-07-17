@@ -12,6 +12,7 @@ Priority
 * javascript
 * C++
 * Erlang
+* Go
 
 
 
