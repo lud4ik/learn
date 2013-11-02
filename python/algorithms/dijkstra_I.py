@@ -7,20 +7,15 @@ from collections import defaultdict
 
 
 def get_input(file_path, directional=True):
-    graph = defaultdict(dict)
+    graph, nodes = defaultdict(dict), set()
     with open(file_path, "r") as f:
         for line in f:
             start, stop, distance = line.split()
+            nodes = nodes.union([start, stop])
             graph[start][stop] = float(distance)
-            if directional:
+            if not directional:
                 graph[stop][start] = float(distance)
-    return graph
-
-
-def get_vertex(graph):
-    for k, values in graph.items():
-        yield k
-        yield from values.keys()
+    return graph, nodes
 
 
 def get_root(stop, path):
@@ -30,10 +25,10 @@ def get_root(stop, path):
         v = path[v][1]
 
 
-def dijkstra(graph, start, stop):
+def dijkstra(graph, gvertex, start, stop):
     path = defaultdict(lambda: [float('inf'), 0])
     vertex = set()
-    for v in get_vertex(graph):
+    for v in gvertex:
         path[v]
         vertex.add(v)
 
@@ -59,8 +54,8 @@ def dijkstra(graph, start, stop):
 
 
 def get_path(file_path, start, stop, directional=True):
-    graph = get_input(file_path, directional)
-    distance, root = dijkstra(graph, start, stop)
+    graph, vertex = get_input(file_path, directional)
+    distance, root = dijkstra(graph, vertex, start, stop)
     if distance:
         result = ""
         for v in reversed(list(root)):

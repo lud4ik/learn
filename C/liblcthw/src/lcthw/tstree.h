@@ -2,7 +2,6 @@
 #define _lctwh_TSTree_h
 
 #include <stdlib.h>
-#include <lcthw/darray.h>
 
 typedef struct TSTree {
     char splitchar;
