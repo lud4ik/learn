@@ -24,6 +24,7 @@ http://www.tutorialspoint.com/ios/index.htm
 DB:
 * http://aphyr.com/
 * http://davidmarquis.wordpress.com/2013/01/03/reliable-delivery-message-queues-with-redis/
+* http://devblog.moz.com/2012/05/introducing-qless-our-new-job-queue/
 
 
 http://health.passion.ru/khoroshee-samochuvstvie/obraz-zhizni/prostye-sposoby-uluchshit-pamyat.htm
