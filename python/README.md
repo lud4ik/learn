@@ -4,4 +4,4 @@ Testing:
 
 
 Forms:
-   csrf -> https://github.com/wtforms/wtforms/blob/master/wtforms/csrf/session.py
+* csrf -> https://github.com/wtforms/wtforms/blob/master/wtforms/csrf/session.py
