@@ -31,3 +31,8 @@ http://health.passion.ru/khoroshee-samochuvstvie/obraz-zhizni/prostye-sposoby-ul
 http://money.violet-lady.ru/test-chem-luchshe-zanimatsya/
 
 * http://www.gamedev.net/page/index.html
+
+
+
+Comfort:
+* https://github.com/Guake/guake/issues/198
