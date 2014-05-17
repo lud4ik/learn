@@ -35,4 +35,4 @@ http://money.violet-lady.ru/test-chem-luchshe-zanimatsya/
 
 
 Comfort:
-* https://github.com/Guake/guake/issues/198
+* https://github.com/Guake/guake/issues/198 (put /etc/rc.local)
