@@ -36,3 +36,8 @@ http://money.violet-lady.ru/test-chem-luchshe-zanimatsya/
 
 Comfort:
 * https://github.com/Guake/guake/issues/198 (put /etc/rc.local)
+
+
+Trouble
+* http://stackoverflow.com/questions/17600566/vagrant-up-is-not-starting-the-vm-in-vagrant-machines-default-virtualbox-id
+* https://github.com/mitchellh/vagrant/issues/1755
