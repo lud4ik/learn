@@ -36,6 +36,7 @@ http://money.violet-lady.ru/test-chem-luchshe-zanimatsya/
 
 Comfort:
 * https://github.com/Guake/guake/issues/198 (put /etc/rc.local)
+* http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/
 
 
 Trouble
