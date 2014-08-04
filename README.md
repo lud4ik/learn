@@ -38,6 +38,7 @@ Comfort:
 * https://github.com/Guake/guake/issues/198 (put /etc/rc.local)
 * http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/
 * http://www.centurylinklabs.com/what-is-docker-and-when-to-use-it/
+* http://gnu.su/news.php?extend.1464
 
 
 Trouble
