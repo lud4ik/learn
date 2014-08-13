@@ -44,3 +44,8 @@ Comfort:
 Trouble
 * http://stackoverflow.com/questions/17600566/vagrant-up-is-not-starting-the-vm-in-vagrant-machines-default-virtualbox-id
 * https://github.com/mitchellh/vagrant/issues/1755
+
+
+
+Progress
+* http://www.terrawomen.com.ua/sex/orgazm_mozga/comments
