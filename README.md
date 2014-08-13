@@ -49,3 +49,4 @@ Trouble
 
 Interests
 * http://www.terrawomen.com.ua/sex/orgazm_mozga/comments
+* http://www.medicaldaily.com/brain-sex-how-brain-functions-during-orgasm-274052
