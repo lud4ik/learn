@@ -48,5 +48,8 @@ Trouble
 
 
 Interests
+* http://www.centrmed.com/news/detail.php?ID=13396#.U-zRQx-3lD8
+* http://www.eurolab.ua/symptomsua/painua/330/
+* http://www.paininfo.ru/practitioner/neurology/psychosocial/aspect/
 * http://www.terrawomen.com.ua/sex/orgazm_mozga/comments
 * http://www.medicaldaily.com/brain-sex-how-brain-functions-during-orgasm-274052
