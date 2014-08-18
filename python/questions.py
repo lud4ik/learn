@@ -21,8 +21,18 @@ def rev(s):
     return s[-1] + rev(s[:-1]) if s else ''
 
 
+def fibo(n):
+    a, b = 0, 1
+    while b <= n:
+        yield b
+        a, b = b, a + b
+
+
 if __name__ == "__main__":
     print rev('123456789')
     for i in range(10):
         obj = Example()
         print obj, id(obj)
+
+    for x in fibo(1000):
+        print x
