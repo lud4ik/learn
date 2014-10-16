@@ -18,6 +18,7 @@ Priority
 
 https://github.com/trending?l=python
 http://deeplearning.net/software/theano/tutorial/python-memory-management.html
+https://dmalcolm.fedorapeople.org/presentations/MemoryUsage.pdf
 
 http://www.tutorialspoint.com/ios/index.htm
 
