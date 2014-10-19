@@ -21,7 +21,9 @@ Python
 * http://deeplearning.net/software/theano/tutorial/python-memory-management.html
 * https://dmalcolm.fedorapeople.org/presentations/MemoryUsage.pdf
 
+
 http://www.tutorialspoint.com/ios/index.htm
+
 http://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap
 
 
@@ -53,6 +55,7 @@ Trouble
 
 Interests
 * http://ford.winnerauto.ua/ua/automobiles/cars/Fiesta/price?gclid=CK6ltaT6rcACFYsMcwodgrIAGQ
+* http://www.adme.ru/tvorchestvo-kino/20-filmov-ot-kotoryh-nam-hochetsya-zhit-724110
 * http://www.centrmed.com/news/detail.php?ID=13396#.U-zRQx-3lD8
 * http://www.eurolab.ua/symptomsua/painua/330/
 * http://www.paininfo.ru/practitioner/neurology/psychosocial/aspect/
