@@ -22,7 +22,7 @@ Python
 * https://dmalcolm.fedorapeople.org/presentations/MemoryUsage.pdf
 
 http://www.tutorialspoint.com/ios/index.htm
-
+http://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap
 
 
 DB:
