@@ -17,6 +17,7 @@ Priority
 
 
 http://highscalability.com/
+http://highscalability.com/blog/2010/10/15/troubles-with-sharding-what-can-we-learn-from-the-foursquare.html
 
 
 Python
