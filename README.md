@@ -16,6 +16,9 @@ Priority
 * Go
 
 
+http://highscalability.com/
+
+
 Python
 * https://github.com/trending?l=python
 * http://deeplearning.net/software/theano/tutorial/python-memory-management.html
