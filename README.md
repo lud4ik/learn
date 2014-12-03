@@ -71,3 +71,7 @@ Interests
 * http://www.paininfo.ru/practitioner/neurology/psychosocial/aspect/
 * http://www.terrawomen.com.ua/sex/orgazm_mozga/comments
 * http://www.medicaldaily.com/brain-sex-how-brain-functions-during-orgasm-274052
+
+
+Motivation:
+* http://dou.ua/lenta/articles/10-veschey-kotoryim-ya-nauchilsya-za-10-let-professionalnoy-razrabotki-po/
