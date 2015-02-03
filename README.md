@@ -37,6 +37,7 @@ Useful
 * https://news.ycombinator.com/news
 * http://www.geeksforgeeks.org/
 * https://consul.io/
+* https://raftconsensus.github.io/
 
 
 DB:
