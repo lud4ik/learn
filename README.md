@@ -75,6 +75,7 @@ Interests
 * http://www.paininfo.ru/practitioner/neurology/psychosocial/aspect/
 * http://www.terrawomen.com.ua/sex/orgazm_mozga/comments
 * http://www.medicaldaily.com/brain-sex-how-brain-functions-during-orgasm-274052
+* http://elitedaily.com/news/world/people-spend-money-experiences-instead-things-much-happier/983208/
 
 
 Motivation:
