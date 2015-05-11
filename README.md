@@ -20,6 +20,8 @@ http://highscalability.com/
 
 http://queues.io/
 
+http://www.pyvideo.org/
+
 
 Python
 * https://github.com/trending?l=python
