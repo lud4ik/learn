@@ -22,6 +22,8 @@ http://queues.io/
 
 http://www.pyvideo.org/
 
+http://samizdat.mines.edu/howto/HowToBeAProgrammer.html
+
 
 Python
 * https://github.com/trending?l=python
