@@ -18,6 +18,8 @@ Priority
 
 http://highscalability.com/
 
+http://coding-geek.com/how-databases-work/
+
 http://queues.io/
 
 http://www.pyvideo.org/
