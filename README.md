@@ -45,6 +45,7 @@ Useful
 * https://consul.io/
 * https://raftconsensus.github.io/
 * https://wiki.ubuntu.com/Security/Features
+* http://stackoverflow.com/questions/7880784/what-is-rss-and-vsz-in-linux-memory-management
 
 
 DB:
