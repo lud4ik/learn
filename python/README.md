@@ -15,3 +15,6 @@ Python internals
 
 Python libs
 * http://blog.gocept.com/2013/07/15/reliable-file-updates-with-python/
+
+Refresh:
+* http://anandology.com/python-practice-book/index.html
